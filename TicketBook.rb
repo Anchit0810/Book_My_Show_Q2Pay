@@ -1,4 +1,5 @@
 class TicketBook < SeatSelect
+  ###### hello git ####
   def initialize
     @@ticket_array = []
     super() 
