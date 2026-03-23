@@ -1,5 +1,5 @@
 class Theater < Movie
-
+ ###### hello git ####
   def initialize
     super()
     @theater = {inox: ["batman","ironman","superman"], pvr: ["ironman","spiderman","superman"],cinepolis: ["batman","superman","spiderman"]}
@@ -26,6 +26,7 @@ class Theater < Movie
         end
         puts '#select one#'
         choice = Integer(gets.chomp)
+        raise "Error Only Digits Are allowed" if choice == nil
 
         if @theater_selection = @available[choice - 1]
           return @theater_selection
@@ -33,8 +34,8 @@ class Theater < Movie
           @count += 1
           raise "invalid selection" 
         end
-      rescue => e
-        puts "Error: #{e}"
+      rescue => e    
+        puts "Error: Invalid Choice Please Enter Number" 
         if @count >= 3
           puts "too many invalid selection"
           exit 

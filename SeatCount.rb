@@ -1,5 +1,5 @@
 class SeatCount < Theater 
-
+###### hello git ####
   def initialize
     @@booked_seats = {}
     super()

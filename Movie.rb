@@ -19,7 +19,7 @@ class Movie
         @count += 1
         raise 'invalid choice'
       end
-     rescue => e
+    rescue => e
       puts "Error: #{e}"
         if @count >= 3
           puts "too many invalid selections"

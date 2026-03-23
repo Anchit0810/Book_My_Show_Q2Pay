@@ -1,5 +1,5 @@
 class SeatSelect < SeatCount 
-  
+  ###### hello git ####
   def initialize
     super()
   end
@@ -25,11 +25,12 @@ class SeatSelect < SeatCount
       end 
       puts @category_choice
     rescue => e
-      puts "Error: #{e}"
+      puts "Error: Please Enter The metnioned Number only"
       retry
     end
 
-   
+    begin
+      total=[]
       if @seat.keys.include?(@category_choice)
         @new_row = @seat[@category_choice]
         @new_row.each do |key,value|
@@ -39,10 +40,6 @@ class SeatSelect < SeatCount
         raise 'invalid selection'
       end
  
-
-
-    begin
-      total=[]
       @new_row.each_key do|key|
         total << @new_row[key]
       end
@@ -60,7 +57,7 @@ class SeatSelect < SeatCount
         @selected_row = row
         @available_seat = @new_row[row]
       else 
-        raise 'invalid'
+        raise 'invalid choice row Alphabaticaly'
       end
     rescue => e 
       puts "Error: #{e}"
